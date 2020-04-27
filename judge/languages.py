@@ -131,6 +131,31 @@ _node_lang_config = {
     }
 }
 
+_rust_lang_config = {
+    "template": """//PREPEND BEGIN
+//PREPEND END
+
+//TEMPLATE BEGIN
+//TEMPLATE END
+
+//APPEND BEGIN
+//APPEND END""",
+    "compile": {
+        "src_name": "main.rs",
+        "exe_name": "main",
+        "max_cpu_time": 10000,
+        "max_real_time": 20000,
+        "max_memory": 1024 * 1024 * 1024,
+        # "compile_command": "/usr/local/cargo/bin/rustc -O {src_path} -o {exe_path}",
+        "compile_command": "/usr/bin/gcc -DONLINE_JUDGE -O2 -w -fmax-errors=3 -std=c11 {src_path} -lm -o {exe_path}",
+    },
+    "run": {
+        "command": "{exe_path}",
+        "seccomp_rule": None,
+        "env": default_env
+    }
+}
+
 
 languages = [
     {"config": _c_lang_config, "spj": {"compile": _c_lang_spj_compile, "config": _c_lang_spj_config},
