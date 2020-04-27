@@ -17,3 +17,4 @@ RUN pip install --no-cache-dir -r /app/deploy/requirements.txt && \
 HEALTHCHECK --interval=5s --retries=3 CMD python2 /app/deploy/health_check.py
 
 ENTRYPOINT /app/deploy/entrypoint.sh
+
