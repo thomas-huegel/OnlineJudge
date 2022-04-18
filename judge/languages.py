@@ -80,5 +80,5 @@ _rust_lang_config = {
 languages = [
     {"config": _c_lang_config, "spj": {"compile": _c_lang_spj_compile, "config": _c_lang_spj_config},
      "name": "C", "description": "GCC 5.4", "content_type": "text/x-csrc"},
-    {"config": _rust_lang_config, "name": "Rust", "description": "Rust 1.42", "content_type": "text/plain"},
+    {"config": _rust_lang_config, "name": "Rust", "description": "Rust 1.59", "content_type": "text/plain"},
 ]
